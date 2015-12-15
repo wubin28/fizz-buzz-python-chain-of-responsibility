@@ -23,8 +23,16 @@ class Handler:
 
 class HandlerFizzbuzz(Handler):
 
-    def handleFizzbuzz(self, number):
+    def handle(self, number):
         if number % 15 == 0:
+            return "FizzBuzz"
+        super(HandlerFizzbuzz, self).__successor.handle(number)
+        
+
+class HandlerFizz(Handler):
+
+    def handle(self, number):
+        if number % 3 == 0:
             return "FizzBuzz"
         
 
