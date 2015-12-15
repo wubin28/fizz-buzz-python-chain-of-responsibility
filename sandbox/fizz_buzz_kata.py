@@ -46,4 +46,8 @@ class HandlerBuzz(Handler):
             return "Buzz"
         super(HandlerBuzz, self).__successor.handle(number)
         
+class HandlerNormalNumber(Handler):
 
+    def handle(self, number):
+        return str(number)
+        
