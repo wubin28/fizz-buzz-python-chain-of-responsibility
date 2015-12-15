@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.5 -- py-1.4.20 -- pytest-2.5.2
+collected 1 items
+
+test_hiker.py F
+
+=================================== FAILURES ===================================
+____________________ test_life_the_universe_and_everything _____________________
+
+    def test_life_the_universe_and_everything():
+        '''a simple example to start you off'''
+        douglas = hiker.Hiker()
+>       assert douglas.answer() == 42
+E       assert 54 == 42
+E        +  where 54 = <bound method Hiker.answer of <hiker.Hiker instance at 0x1e00950>>()
+E        +    where <bound method Hiker.answer of <hiker.Hiker instance at 0x1e00950>> = <hiker.Hiker instance at 0x1e00950>.answer
+
+test_hiker.py:6: AssertionError
+=========================== 1 failed in 0.02 seconds ===========================
