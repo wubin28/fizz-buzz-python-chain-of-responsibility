@@ -32,6 +32,7 @@ class HandlerFizz(Handler):
             return "Fizz"
         return self._successor.handle(number)
         
+
 class HandlerBuzz(Handler):
 
     def handle(self, number):
@@ -39,8 +40,10 @@ class HandlerBuzz(Handler):
             return "Buzz"
         return self._successor.handle(number)
         
+
 class HandlerNormalNumber(Handler):
 
     def handle(self, number):
         return str(number)
         
+
