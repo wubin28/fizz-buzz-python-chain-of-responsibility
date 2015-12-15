@@ -15,6 +15,12 @@ class Fizzbuzz:
         return str(number)
 
 
+class Handler:
+
+    def __init__(self, successor = None):
+        self.__successor = successor
+
+
 class HandlerFizzbuzz(Handler):
 
     def handleFizzbuzz(self, number):
@@ -22,7 +28,3 @@ class HandlerFizzbuzz(Handler):
             return "FizzBuzz"
         
 
-class Handler:
-
-    def __init__(self, successor = None):
-        self.__successor = successor
