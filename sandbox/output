@@ -17,7 +17,7 @@ _______ test_it_should_print_the_number_itself_if_it_is_a_normal_number ________
 test_fizz_buzz.py:8: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.Fizzbuzz instance at 0x2923b48>, number = 1
+self = <fizz_buzz_kata.Fizzbuzz instance at 0x2f1db90>, number = 1
 
     def say(self, number):
         if number % 15 == 0:
@@ -27,8 +27,8 @@ self = <fizz_buzz_kata.Fizzbuzz instance at 0x2923b48>, number = 1
         if number % 5 == 0:
             return "Buzz"
     
->       result = handlerFizzbuzz.handle(number)
-E       NameError: global name 'handlerFizzbuzz' is not defined
+>       handlerFizzbuzz = HandlerFizzbuzz(handlerFizz)
+E       NameError: global name 'HandlerFizzbuzz' is not defined
 
 fizz_buzz_kata.py:12: NameError
 ====================== 1 failed, 3 passed in 0.02 seconds ======================

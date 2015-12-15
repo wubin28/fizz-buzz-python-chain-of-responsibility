@@ -9,6 +9,7 @@ class Fizzbuzz:
         if number % 5 == 0:
             return "Buzz"
 
+        handlerFizzbuzz = HandlerFizzbuzz(handlerFizz)
         result = handlerFizzbuzz.handle(number)
 
         return str(number)
