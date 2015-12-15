@@ -13,3 +13,10 @@ class Fizzbuzz:
         result = handlerFizzbuzz.handle(number)
 
         return str(number)
+
+class HandlerFizzbuzz(Handler):
+
+    def handleFizzbuzz(self, number):
+        if number % 15 == 0:
+            return "FizzBuzz"
+        
