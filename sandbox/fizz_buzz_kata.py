@@ -8,14 +8,7 @@ class Fizzbuzz:
         handlerFizzbuzz = HandlerFizzbuzz(handlerFizz)
         result = handlerFizzbuzz.handle(number)
 
-        if number % 15 == 0:
-            return "FizzBuzz"
-        if number % 3 == 0:
-            return "Fizz"
-        if number % 5 == 0:
-            return "Buzz"
-
-        return str(number)
+        return result
 
 
 class Handler:
@@ -29,7 +22,7 @@ class HandlerFizzbuzz(Handler):
     def handle(self, number):
         if number % 15 == 0:
             return "FizzBuzz"
-        self._successor.handle(number)
+        return self._successor.handle(number)
         
 
 class HandlerFizz(Handler):
@@ -37,14 +30,14 @@ class HandlerFizz(Handler):
     def handle(self, number):
         if number % 3 == 0:
             return "Fizz"
-        self._successor.handle(number)
+        return self._successor.handle(number)
         
 class HandlerBuzz(Handler):
 
     def handle(self, number):
         if number % 5 == 0:
             return "Buzz"
-        self._successor.handle(number)
+        return self._successor.handle(number)
         
 class HandlerNormalNumber(Handler):
 
