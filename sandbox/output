@@ -2,7 +2,7 @@
 platform linux2 -- Python 2.7.5 -- py-1.4.20 -- pytest-2.5.2
 collected 4 items
 
-test_fizz_buzz.py FFF.
+test_fizz_buzz.py F.F.
 
 =================================== FAILURES ===================================
 _______ test_it_should_print_the_number_itself_if_it_is_a_normal_number ________
@@ -17,7 +17,7 @@ _______ test_it_should_print_the_number_itself_if_it_is_a_normal_number ________
 test_fizz_buzz.py:8: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.Fizzbuzz instance at 0x2ac5b90>, number = 1
+self = <fizz_buzz_kata.Fizzbuzz instance at 0x19fbb90>, number = 1
 
     def say(self, number):
         handlerNormalNumber = HandlerNormalNumber(None)
@@ -29,48 +29,25 @@ self = <fizz_buzz_kata.Fizzbuzz instance at 0x2ac5b90>, number = 1
 fizz_buzz_kata.py:9: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.HandlerFizzbuzz instance at 0x2ac5cf8>, number = 1
+self = <fizz_buzz_kata.HandlerFizzbuzz instance at 0x19fbcf8>, number = 1
 
     def handle(self, number):
         if number % 15 == 0:
             return "FizzBuzz"
->       self.__successor.handle(number)
-E       AttributeError: HandlerFizzbuzz instance has no attribute '_HandlerFizzbuzz__successor'
+>       self._successor.handle(number)
 
-fizz_buzz_kata.py:32: AttributeError
-_____________ test_it_should_print_Fizz_if_it_is_multiple_of_three _____________
-
-    def test_it_should_print_Fizz_if_it_is_multiple_of_three():
-        # arrange
-        fizzbuzz = fizz_buzz_kata.Fizzbuzz()
-    
-        # act & assert
->       assert fizzbuzz.say(3) == "Fizz"
-
-test_fizz_buzz.py:15: 
+fizz_buzz_kata.py:32: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.Fizzbuzz instance at 0x28c8c68>, number = 3
-
-    def say(self, number):
-        handlerNormalNumber = HandlerNormalNumber(None)
-        handlerBuzz = HandlerBuzz(handlerNormalNumber)
-        handlerFizz = HandlerFizz(handlerBuzz)
-        handlerFizzbuzz = HandlerFizzbuzz(handlerFizz)
->       result = handlerFizzbuzz.handle(number)
-
-fizz_buzz_kata.py:9: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <fizz_buzz_kata.HandlerFizzbuzz instance at 0x2a61170>, number = 3
+self = <fizz_buzz_kata.HandlerFizz instance at 0x19fbcb0>, number = 1
 
     def handle(self, number):
-        if number % 15 == 0:
-            return "FizzBuzz"
->       self.__successor.handle(number)
-E       AttributeError: HandlerFizzbuzz instance has no attribute '_HandlerFizzbuzz__successor'
+        if number % 3 == 0:
+            return "Fizz"
+>       super(HandlerFizz, self).__successor.handle(number)
+E       TypeError: must be type, not classobj
 
-fizz_buzz_kata.py:32: AttributeError
+fizz_buzz_kata.py:40: TypeError
 _____________ test_it_should_print_Buzz_if_it_is_multiple_of_five ______________
 
     def test_it_should_print_Buzz_if_it_is_multiple_of_five():
@@ -83,7 +60,7 @@ _____________ test_it_should_print_Buzz_if_it_is_multiple_of_five ______________
 test_fizz_buzz.py:22: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.Fizzbuzz instance at 0x2acd950>, number = 5
+self = <fizz_buzz_kata.Fizzbuzz instance at 0x1997098>, number = 5
 
     def say(self, number):
         handlerNormalNumber = HandlerNormalNumber(None)
@@ -95,13 +72,23 @@ self = <fizz_buzz_kata.Fizzbuzz instance at 0x2acd950>, number = 5
 fizz_buzz_kata.py:9: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.HandlerFizzbuzz instance at 0x2ad0050>, number = 5
+self = <fizz_buzz_kata.HandlerFizzbuzz instance at 0x1997518>, number = 5
 
     def handle(self, number):
         if number % 15 == 0:
             return "FizzBuzz"
->       self.__successor.handle(number)
-E       AttributeError: HandlerFizzbuzz instance has no attribute '_HandlerFizzbuzz__successor'
+>       self._successor.handle(number)
 
-fizz_buzz_kata.py:32: AttributeError
-====================== 3 failed, 1 passed in 0.04 seconds ======================
+fizz_buzz_kata.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <fizz_buzz_kata.HandlerFizz instance at 0x1997200>, number = 5
+
+    def handle(self, number):
+        if number % 3 == 0:
+            return "Fizz"
+>       super(HandlerFizz, self).__successor.handle(number)
+E       TypeError: must be type, not classobj
+
+fizz_buzz_kata.py:40: TypeError
+====================== 2 failed, 2 passed in 0.04 seconds ======================

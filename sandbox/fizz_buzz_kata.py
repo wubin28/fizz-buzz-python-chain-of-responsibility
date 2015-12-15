@@ -21,7 +21,7 @@ class Fizzbuzz:
 class Handler:
 
     def __init__(self, successor = None):
-        self.__successor = successor
+        self._successor = successor
 
 
 class HandlerFizzbuzz(Handler):
@@ -29,7 +29,7 @@ class HandlerFizzbuzz(Handler):
     def handle(self, number):
         if number % 15 == 0:
             return "FizzBuzz"
-        self.__successor.handle(number)
+        self._successor.handle(number)
         
 
 class HandlerFizz(Handler):
