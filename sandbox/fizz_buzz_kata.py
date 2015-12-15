@@ -2,6 +2,7 @@
 class Fizzbuzz:
 
     def say(self, number):
+        handlerBuzz = HandlerBuzz(handlerNormalNumber)
         handlerFizz = HandlerFizz(handlerBuzz)
         handlerFizzbuzz = HandlerFizzbuzz(handlerFizz)
         result = handlerFizzbuzz.handle(number)
