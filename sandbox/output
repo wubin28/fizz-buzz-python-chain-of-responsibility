@@ -2,6 +2,33 @@
 platform linux2 -- Python 2.7.5 -- py-1.4.20 -- pytest-2.5.2
 collected 4 items
 
-test_fizz_buzz.py ....
+test_fizz_buzz.py F...
 
-=========================== 4 passed in 0.02 seconds ===========================
+=================================== FAILURES ===================================
+_______ test_it_should_print_the_number_itself_if_it_is_a_normal_number ________
+
+    def test_it_should_print_the_number_itself_if_it_is_a_normal_number():
+        # arrange
+        fizzbuzz = fizz_buzz_kata.Fizzbuzz()
+    
+        # act & assert
+>       assert fizzbuzz.say(1) == "1"
+
+test_fizz_buzz.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <fizz_buzz_kata.Fizzbuzz instance at 0x2923b48>, number = 1
+
+    def say(self, number):
+        if number % 15 == 0:
+            return "FizzBuzz"
+        if number % 3 == 0:
+            return "Fizz"
+        if number % 5 == 0:
+            return "Buzz"
+    
+>       result = handlerFizzbuzz.handle(number)
+E       NameError: global name 'handlerFizzbuzz' is not defined
+
+fizz_buzz_kata.py:12: NameError
+====================== 1 failed, 3 passed in 0.02 seconds ======================
