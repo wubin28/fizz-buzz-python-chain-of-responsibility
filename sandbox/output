@@ -17,11 +17,11 @@ _______ test_it_should_print_the_number_itself_if_it_is_a_normal_number ________
 test_fizz_buzz.py:8: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.Fizzbuzz instance at 0x1c81b90>, number = 1
+self = <fizz_buzz_kata.Fizzbuzz instance at 0x1365b90>, number = 1
 
     def say(self, number):
 >       handlerBuzz = HandlerBuzz(handlerNormalNumber)
-E       NameError: global name 'HandlerBuzz' is not defined
+E       NameError: global name 'handlerNormalNumber' is not defined
 
 fizz_buzz_kata.py:5: NameError
 _____________ test_it_should_print_Fizz_if_it_is_multiple_of_three _____________
@@ -36,11 +36,11 @@ _____________ test_it_should_print_Fizz_if_it_is_multiple_of_three _____________
 test_fizz_buzz.py:15: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.Fizzbuzz instance at 0x1c1ae60>, number = 3
+self = <fizz_buzz_kata.Fizzbuzz instance at 0x1168c68>, number = 3
 
     def say(self, number):
 >       handlerBuzz = HandlerBuzz(handlerNormalNumber)
-E       NameError: global name 'HandlerBuzz' is not defined
+E       NameError: global name 'handlerNormalNumber' is not defined
 
 fizz_buzz_kata.py:5: NameError
 _____________ test_it_should_print_Buzz_if_it_is_multiple_of_five ______________
@@ -55,11 +55,11 @@ _____________ test_it_should_print_Buzz_if_it_is_multiple_of_five ______________
 test_fizz_buzz.py:22: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.Fizzbuzz instance at 0x1c1d950>, number = 5
+self = <fizz_buzz_kata.Fizzbuzz instance at 0x13704d0>, number = 5
 
     def say(self, number):
 >       handlerBuzz = HandlerBuzz(handlerNormalNumber)
-E       NameError: global name 'HandlerBuzz' is not defined
+E       NameError: global name 'handlerNormalNumber' is not defined
 
 fizz_buzz_kata.py:5: NameError
 ____ test_it_should_print_FizzBuzz_if_it_is_multiple_of_both_three_and_five ____
@@ -74,11 +74,11 @@ ____ test_it_should_print_FizzBuzz_if_it_is_multiple_of_both_three_and_five ____
 test_fizz_buzz.py:29: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.Fizzbuzz instance at 0x1c8dbd8>, number = 15
+self = <fizz_buzz_kata.Fizzbuzz instance at 0x1370f80>, number = 15
 
     def say(self, number):
 >       handlerBuzz = HandlerBuzz(handlerNormalNumber)
-E       NameError: global name 'HandlerBuzz' is not defined
+E       NameError: global name 'handlerNormalNumber' is not defined
 
 fizz_buzz_kata.py:5: NameError
 =========================== 4 failed in 0.04 seconds ===========================
