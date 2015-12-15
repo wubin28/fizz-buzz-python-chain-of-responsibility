@@ -6,7 +6,7 @@ collected 0 items / 1 errors
 ______________________ ERROR collecting test_fizz_buzz.py ______________________
 test_fizz_buzz.py:1: in <module>
 >   import fizz_buzz_kata
-fizz_buzz_kata.py:17: in <module>
+fizz_buzz_kata.py:18: in <module>
 >   class HandlerFizzbuzz(Handler):
 E           NameError: name 'Handler' is not defined
 =========================== 1 error in 0.01 seconds ============================

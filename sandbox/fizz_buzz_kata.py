@@ -14,9 +14,15 @@ class Fizzbuzz:
 
         return str(number)
 
+
 class HandlerFizzbuzz(Handler):
 
     def handleFizzbuzz(self, number):
         if number % 15 == 0:
             return "FizzBuzz"
         
+
+class Handler:
+
+    def __init__(self, successor = None):
+        self.__successor = successor
