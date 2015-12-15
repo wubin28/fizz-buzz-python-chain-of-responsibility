@@ -2,6 +2,46 @@
 platform linux2 -- Python 2.7.5 -- py-1.4.20 -- pytest-2.5.2
 collected 4 items
 
-test_fizz_buzz.py ....
+test_fizz_buzz.py FFF.
 
-=========================== 4 passed in 0.02 seconds ===========================
+=================================== FAILURES ===================================
+_______ test_it_should_print_the_number_itself_if_it_is_a_normal_number ________
+
+    def test_it_should_print_the_number_itself_if_it_is_a_normal_number():
+        # arrange
+        fizzbuzz = fizz_buzz_kata.Fizzbuzz()
+    
+        # act & assert
+>       assert fizzbuzz.say(1) == "1"
+E       assert None == '1'
+E        +  where None = <bound method Fizzbuzz.say of <fizz_buzz_kata.Fizzbuzz instance at 0x26b5b48>>(1)
+E        +    where <bound method Fizzbuzz.say of <fizz_buzz_kata.Fizzbuzz instance at 0x26b5b48>> = <fizz_buzz_kata.Fizzbuzz instance at 0x26b5b48>.say
+
+test_fizz_buzz.py:8: AssertionError
+_____________ test_it_should_print_Fizz_if_it_is_multiple_of_three _____________
+
+    def test_it_should_print_Fizz_if_it_is_multiple_of_three():
+        # arrange
+        fizzbuzz = fizz_buzz_kata.Fizzbuzz()
+    
+        # act & assert
+>       assert fizzbuzz.say(3) == "Fizz"
+E       assert None == 'Fizz'
+E        +  where None = <bound method Fizzbuzz.say of <fizz_buzz_kata.Fizzbuzz instance at 0x26bd6c8>>(3)
+E        +    where <bound method Fizzbuzz.say of <fizz_buzz_kata.Fizzbuzz instance at 0x26bd6c8>> = <fizz_buzz_kata.Fizzbuzz instance at 0x26bd6c8>.say
+
+test_fizz_buzz.py:15: AssertionError
+_____________ test_it_should_print_Buzz_if_it_is_multiple_of_five ______________
+
+    def test_it_should_print_Buzz_if_it_is_multiple_of_five():
+        # arrange
+        fizzbuzz = fizz_buzz_kata.Fizzbuzz()
+    
+        # act & assert
+>       assert fizzbuzz.say(5) == "Buzz"
+E       assert None == 'Buzz'
+E        +  where None = <bound method Fizzbuzz.say of <fizz_buzz_kata.Fizzbuzz instance at 0x26b7170>>(5)
+E        +    where <bound method Fizzbuzz.say of <fizz_buzz_kata.Fizzbuzz instance at 0x26b7170>> = <fizz_buzz_kata.Fizzbuzz instance at 0x26b7170>.say
+
+test_fizz_buzz.py:22: AssertionError
+====================== 3 failed, 1 passed in 0.03 seconds ======================
