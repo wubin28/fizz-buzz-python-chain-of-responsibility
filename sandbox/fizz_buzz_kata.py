@@ -29,7 +29,7 @@ class HandlerFizzbuzz(Handler):
     def handle(self, number):
         if number % 15 == 0:
             return "FizzBuzz"
-        super(HandlerFizzbuzz, self).__successor.handle(number)
+        self.__successor.handle(number)
         
 
 class HandlerFizz(Handler):
