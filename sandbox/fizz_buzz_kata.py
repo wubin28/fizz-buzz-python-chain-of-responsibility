@@ -37,14 +37,14 @@ class HandlerFizz(Handler):
     def handle(self, number):
         if number % 3 == 0:
             return "Fizz"
-        super(HandlerFizz, self).__successor.handle(number)
+        self._successor.handle(number)
         
 class HandlerBuzz(Handler):
 
     def handle(self, number):
         if number % 5 == 0:
             return "Buzz"
-        super(HandlerBuzz, self).__successor.handle(number)
+        self._successor.handle(number)
         
 class HandlerNormalNumber(Handler):
 
