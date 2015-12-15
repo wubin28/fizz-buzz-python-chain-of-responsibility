@@ -33,6 +33,6 @@ class HandlerFizz(Handler):
 
     def handle(self, number):
         if number % 3 == 0:
-            return "FizzBuzz"
+            return "Fizz"
         
 

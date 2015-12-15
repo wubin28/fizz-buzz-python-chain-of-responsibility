@@ -17,7 +17,7 @@ _______ test_it_should_print_the_number_itself_if_it_is_a_normal_number ________
 test_fizz_buzz.py:8: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <fizz_buzz_kata.Fizzbuzz instance at 0x1a84b90>, number = 1
+self = <fizz_buzz_kata.Fizzbuzz instance at 0x231fb90>, number = 1
 
     def say(self, number):
         if number % 15 == 0:
